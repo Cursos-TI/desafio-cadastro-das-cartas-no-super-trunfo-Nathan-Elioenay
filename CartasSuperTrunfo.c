@@ -18,5 +18,27 @@ int main() {
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
+    struct Carta{ //estrutura da carta
+
+        char codigo[4];
+        int populacao;
+        float area;
+        float pib;
+        int pontoTuristico;
+    };
+
+    //duas cartas
+
+    struct Carta carta1;
+    struct Carta carta2;
+
+    //cadastro da primeira carta
+
+    printf("Digite o codigo da primeira carta (ex: A01)" );
+    scanf("%s", carta1.codigo);
+
+    printf("Digite a população da primeira carta: ");
+    scanf("%d", carta1.populacao);
+
     return 0;
 }
