@@ -1,13 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    char estado1[8], codigo1[4], cidade1[32];
+    char estado[] = {'A', 'B', 'C', 'D', 'E', 'F', 'H'};
+
+    char codigo1[4], cidade1[32];
     int populacao1, ponto_turistico1;
     float area1, pib1;
 
-    char estado2[8], codigo2[4], cidade2[32];
+    char codigo2[4], cidade2[32];
     int populacao2, ponto_turistico2;
     float area2, pib2;
+
 
     printf("\n---------------------------------\n");
     printf("\nSUPER-TRUNFO\n");
@@ -20,7 +23,7 @@ int main() {
     printf("--- Carta 01 ---\n");
 
     printf("Digite o estado (A-H): ");
-    scanf("%s", estado1);
+    scanf("%s", estado);
 
     printf("Digite o codigo EX:'A01': ");
     scanf("%s", codigo1);
@@ -45,7 +48,7 @@ int main() {
     printf("--- Carta 02 ---\n");
 
     printf("Digite o estado (A-H): ");
-    scanf("%s", estado2);
+    scanf("%s", estado);
 
     printf("Digite o codigo EX:'A01': ");
     scanf("%s", codigo2);
@@ -67,27 +70,43 @@ int main() {
 
     printf("\n-------------------------------\n");
 
+     //DENSIDADE POPULACIONAL
+
+    float densidadePopulacao1 = (float)populacao1 / area1;//'casting' para maior precisao dos dados;
+    float densidadePopulacao2 = (float)populacao2 / area2;//'casting' para maior precisao dos dados;
+
+    //PIB PER CAPITA
+
+    float perCapita1 = (float)pib1 / populacao1;//'casting' para maior precisao dos dados;
+    float perCapita2 = (float)pib2 / populacao2;//'casting' para maior precisao dos dados;
+
+
     // Exibição dos dados
     printf("\n------------\n");
     printf("\nCARTA 1\n");
-    printf("Estado: %s\n", estado1);
+    printf("Estado: %s\n", estado);
     printf("Código: %s\n", codigo1);
     printf("Nome da cidade: %s\n", cidade1);
-    printf("População: %d\n", populacao1);
+    printf("População: %d Habitantes\n", populacao1);
     printf("Pontos turísticos: %d\n", ponto_turistico1);
-    printf("Área geográfica: %.2f\n", area1);
-    printf("PIB: %.8f\n", pib1);
+    printf("Área geográfica: %.2f km²\n", area1);
+    printf("PIB: R$%.2f Bilhoes de reais\n", pib1);
+    printf("Densidade populacional: %.2f hab/km².\n", densidadePopulacao1);
+    printf("PIB per capita: R$%.2f Reais.\n", perCapita1);
+
 
     printf("\n------------\n");
 
     printf("\nCARTA 2\n");
-    printf("Estado: %s\n", estado2);
+    printf("Estado: %s\n", estado);
     printf("Código: %s\n", codigo2);
     printf("Nome da cidade: %s\n", cidade2);
-    printf("População: %d\n", populacao2);
+    printf("População: %d Habitantes\n", populacao2);
     printf("Pontos turísticos: %d\n", ponto_turistico2);
-    printf("Área geográfica: %.2f\n", area2);
-    printf("PIB: %.8f\n", pib2);
+    printf("Área geográfica: %.2f km²\n", area2);
+    printf("PIB: R$%.2f Bilhoes de reais\n", pib2);
+    printf("Densidade populacional: %.2f hab/km².\n", densidadePopulacao2);
+    printf("PIB per capita: R$%.2f Reais.\n", perCapita2);
 
     printf("\n------------\n");
 
