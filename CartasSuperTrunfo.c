@@ -84,8 +84,8 @@ int main() {
 
     //Super Poder
 
-    float superPoder1 = (float)(populacao1 + ponto_turistico1 + area1 + pib1 + perCapita1) - densidadePopulacao1;
-    float superPoder2 = (float)(populacao2 + ponto_turistico2 + area2 + pib2 + perCapita2) - densidadePopulacao2;
+    float superPoder1 = (float)(populacao1 + ponto_turistico1 + area1 + pib1 + perCapita1) / densidadePopulacao1;
+    float superPoder2 = (float)(populacao2 + ponto_turistico2 + area2 + pib2 + perCapita2) / densidadePopulacao2;
 
 
     // Exibição dos dados
